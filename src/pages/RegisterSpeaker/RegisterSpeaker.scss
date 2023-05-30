@@ -1,0 +1,128 @@
+@use '../../Variables' as vars;
+
+.container-speaker {
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+    min-height: 100vh;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+} 
+
+.register-speaker {
+    padding: 30px;
+    border-radius: 8px;
+    width: 650px;
+    margin: auto;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+} 
+
+.botao-speaker {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-speaker {
+    margin-top: 20px !important;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+    width: 40% !important;
+    font-family:sans-serif;
+    font-weight: 100;
+    font-size: small;
+    margin: 10px;
+}
+
+.btn-speaker:hover {
+    transform: scale(1.025);
+}
+
+.form-control::placeholder {
+    font-family:sans-serif;
+    font-weight: 600;
+    font-size: small;
+}
+
+label{
+    padding-left: 12px;
+    font-family:sans-serif;
+    font-weight: 500;
+    font-size: small;
+    color: #6c757d !important;
+}
+
+.input-form::-webkit-file-upload-button {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    color: white !important;
+    border: none !important;
+    border-top-left-radius: 4px !important;
+    cursor: pointer;
+}
+
+.input-form {
+    font-family:sans-serif !important;
+    font-weight: 600 !important;
+    font-size: small !important;
+    font-style: normal !important;
+    color:rgba(0, 0, 0, 0.25) !important;
+}
+
+.input-form:focus {
+    text-decoration: none;
+    border-bottom: rgba(0, 0, 0, 0.25);
+    color:rgba(0, 0, 0, 0.25);
+}
+
+.speaker-span-error {
+    color: vars.$danger;
+    font-size: small;
+}
+
+@media (max-width: 767px) {
+    .register-speaker {
+        width: 350px;
+    }
+
+    .botao {
+        padding-top: 30px;
+    }
+
+    .btn-speaker {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container-speaker{
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .register-speaker {
+        padding: 30px;
+        height: 600px;
+        margin-top: 100px;
+        margin: auto;
+        height: auto;
+        margin-top: 120px;
+    }
+
+    .btn-speaker {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .register-speaker {
+        padding: 30px;
+        width: 725px;
+    }
+
+    .btn-speaker {
+        margin-top: 40px;
+        width: 50%;
+    }
+}

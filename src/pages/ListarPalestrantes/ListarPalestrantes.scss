@@ -1,0 +1,54 @@
+.listarPalestrantes {
+  padding: 0px !important;
+  max-width: 650px !important;
+}
+
+.listarPalestrantes-maior {
+  height: 100vh;
+}
+
+.table-listarPalestrantes {
+  border: darkgray !important;
+}
+
+.icon-listarPalestrante {
+  font-size: 23px;
+}
+
+.item-modal-palestrante {
+  padding-bottom: 4px;
+  margin-left: 0px;
+  border-bottom: 1px solid;
+}
+
+//css paginação
+.page-number {
+  padding: 1px 4px;
+  margin-right: 2px;
+  border: none;
+  background-color: #ffffff;
+  color: #070707;
+}
+
+.page-number.active {
+  background-color: #4cb294;
+  color: #fff;
+}
+
+.arrow-left {
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-top: 10px solid #ffffff;
+  border-bottom: 10px solid #ffffff;
+  border-right: 15px solid #000000ce;
+}
+
+.arrow-right {
+  border: none;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #ffffff;
+  border-bottom: 10px solid #ffffff;
+  border-left: 15px solid #000000ce;
+}

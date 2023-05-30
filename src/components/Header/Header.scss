@@ -1,0 +1,203 @@
+
+
+.item-offcanvas {
+  margin: auto;
+  display: block !important;
+}
+
+.text-offcanvas {
+  display: none;
+  width: 130px;
+  font-size: 100px;
+  color: white !important;
+}
+
+.btn-sair {
+  position: relative;
+  right: 10vw;
+  top: 6vh;
+}
+
+
+.header {
+  text-align: end;
+  font-size: 24px;
+  position: fixed !important;
+  width: 100%;
+  z-index: 1000;
+}
+
+.icons-navbar {
+  color: white;
+  margin-right: 10px;
+}
+
+.btn-voltar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 56px;
+  height: 40px;
+  margin: 0 !important;
+}
+
+.esquerda-header,
+.direita-header {
+  width: 56px;
+  height: 40px;
+  margin: 0 !important;
+}
+
+.esquerda-header,
+.direita-header {
+  display: none;
+}
+
+.logo-container-header {
+  width: 90px;
+}
+
+.logo-container-header img {
+  width: 100%;
+  height: 100%;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nome-pagina-mobile {
+  color: white
+}
+
+.nome-pagina-mobile p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+}
+.nome-pagina{
+font-size: 30px;
+
+}
+.navbar-toggler-icon{
+  color: white !important;
+}
+.navbar{
+  --bs-navbar-toggler-icon-bg: url(../../assets/images/menu.png) !important;
+}
+
+.btn-close{
+  background: url(../../assets/images/close.png) no-repeat !important;
+}
+
+.navbar-toggler {
+  color: transparent !important;
+}
+
+.logo-offcanvas{
+  width: 150px;
+}
+
+@media (max-width: 420px) {
+  .offcanvas {
+    width: 85% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-sair {
+    right: 7vw;
+  }
+
+  .btn-voltar {
+    display: none;
+  }
+
+  .esquerda-header {
+    display: block;
+  }
+
+  .logo-container-header{
+    width: 90px;
+  }
+
+  .logo-container-header img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .nome-pagina-mobile {
+    display: none;
+  }
+
+
+}
+
+@media (min-width: 1000px) {
+  .btn-sair {
+    right: 5vw;
+  }
+
+  .btn-voltar {
+    display: none;
+  }
+
+  .esquerda-header {
+    display: block;
+  }
+
+  .logo-container-header {
+    width: 90px;
+  }
+
+  .logo-container-header img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .nome-pagina-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-offcanvas {
+    display: none !important;
+  }
+
+  .item-offcanvas {
+    display: none !important;
+  }
+
+  .direita-header {
+    display: block;
+  }
+
+  .offcanvas.offcanvas-end {
+    display: none !important;
+  }
+
+  .btn-voltar {
+    display: none;
+  }
+
+  .esquerda-header {
+    display: block;
+  }
+
+  .logo-container-header {
+    width: 90px;
+  }
+
+  .logo-container-header img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .nome-pagina-mobile {
+    display: none;
+  }
+}

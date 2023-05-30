@@ -1,0 +1,123 @@
+@use '../../Variables' as vars;
+
+.timiline-container {
+    display: flex;
+}
+
+.container-timeline-contents {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tabs-container {
+    margin-top: 130px;
+}
+
+.tabs-container ul {
+    margin-top: 50px;
+    display: flex;
+    gap: 80px;
+    border: none;
+}
+
+.nav .nav-tabs {
+    border: none;
+    display: flex;
+}
+
+.nav-item button {
+    color: black;
+}
+
+.nav-item button:hover {
+    color: vars.$primary;
+}
+
+.nav-item button.active {
+    transition: transform 1s ease-in-out;
+}
+
+.nav-item button.active:after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: vars.$primary;
+    margin-top: 2px;
+    transform: scaleX(0);
+}
+
+.nav-item button.active:after {
+    transform: scaleX(1);
+}
+
+.nav-item button.active {
+    border: none;
+}
+
+.nav-tabs .nav-link.active {
+    border: none;
+}
+
+.nav .nav-tabs {
+    border: none;
+}
+
+.nav-tabs .nav-link {
+    border: none !important;
+}
+
+.nav-item button:active {
+    border: none;
+}
+
+.nav-item button:focus {
+    border: none;
+}
+
+.btn-add {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    bottom: 70px;
+    right: 200px;
+    background-color: vars.$success;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 100%;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, .3);
+    transition: 0.4s;
+}
+
+.btn-add:hover {
+    background-color: vars.$successHover;
+    transform: scale(1.1);
+}
+
+
+
+@media (max-width: 800px) {
+    .tabs-container ul {
+        gap: 0px !important;
+    }
+    .tabs-container {
+
+        max-width: 290px !important;
+    }
+    .btn-add {
+        right: 30px;
+        bottom: 30px;
+    }
+}
+
+@media (min-width: 100px) and (max-width: 1150px) {
+    .btn-add {
+        right: 60px;
+    }
+}

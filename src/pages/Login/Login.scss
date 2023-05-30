@@ -1,0 +1,204 @@
+@use '../../Variables' as vars;
+
+.container-center-login {
+    display: none;
+}
+
+.form-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("../../assets/images/background/logo-new-mobile.png") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.divider-layout-desktop {
+    background-color: aliceblue;
+    width: 40%;
+}
+
+.form-container {
+    background-image: url("../../assets/images/background/logo-new-mobile.png") !important;
+}
+
+.link-password a {
+    color: black;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.link-password a:hover {
+    color: vars.$primary;
+    font-weight: 500;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.buttons button {
+    width: 100%;
+}
+
+.form-container-mobile {
+    padding: 20px;
+}
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+.bi-check-circle-fill {
+    color: vars.$primary;
+}
+
+.logo-mobile-forms {
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 50px;
+}
+
+.logo-mobile-forms img {
+    width: 100%;
+}
+
+.botao-desabilitado {
+
+    opacity: 0.5 !important;
+    pointer-events:none !important; 
+    cursor: wait;
+}
+
+
+
+
+
+
+/* novo */
+/* Desktop */
+
+@media (min-width: 500px) {
+    .container-login {
+        background-image: url("../../assets/planodefundo_entrar.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: auto !important;
+        display: flex;
+        min-height: 100vh !important;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .container-center-login {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .form-container {
+        box-shadow: 0 5px 9px rgba(0, 0, 0, .3);
+        background-image: url("../../assets/images/background/logo-new-mobile.png") !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 30px;
+        height: auto !important;
+        width: 450px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .form-container-mobile {
+        display: none;
+    }
+}
+
+.modal-header-esqueci-senha {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.btn-close {
+    margin-left: 0 !important;
+}
+
+.esquerda-header-modal-esqueci-senha {
+    width: 16px;
+    margin: 8px;
+}
+
+@media (max-width: 375px) and (max-height: 667px) {
+    .form-container-mobile {
+        background-image: url("../../assets/images/background/logo-new-mobile.png") !important;
+    }
+
+    .form-container-group {
+        margin-top: 0px !important;
+    }
+
+    .logo-mobile-forms {
+        width: 200px;
+        bottom: 20px;
+    }
+
+    .buttons {
+        margin-top: 15px !important;
+    }
+
+}
+
+@media (max-width: 360px) and (max-height: 740px) {
+    .form-container-mobile {
+        background-image: url("../../assets/images/background/logo-new-mobile.png") !important;
+    }
+
+    .form-container-group {
+        margin-top: 0px !important;
+    }
+
+    .logo-mobile-forms {
+        width: 200px;
+        bottom: 20px;
+    }
+
+    .buttons {
+        margin-top: 15px !important;
+    }
+
+}
+
+@media only screen and (min-width: 390px) and (max-width: 851px) {
+    .form-container-mobile {
+        background-image: url("../../assets/images/background/logo-new-mobile.png") !important;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 740px) {
+    .form-container-mobile {
+        background-image: url("../../assets/images/background/logo-new-mobile.png") !important;
+    }
+}
+
+@media only screen and (min-width: 820x) and (max-width: 1180px) {
+    .form-container-mobile {
+        background-image: url("../../assets/images/background/logo-new-mobile.png") !important;
+    }
+}
+
+@media (max-width: 540px) and (max-height: 720px) {
+    .form-container-mobile {
+        background-image: url("../../assets/images/background/logo-new-mobile.png") !important;
+    }
+
+    .container-login {
+        height: auto;
+    }
+}

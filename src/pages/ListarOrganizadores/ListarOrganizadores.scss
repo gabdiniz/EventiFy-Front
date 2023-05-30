@@ -1,0 +1,30 @@
+
+
+
+.listarOrganizadores {
+  padding: 0px !important;
+  max-width: 650px !important;
+}
+
+.listarOrganizadores-maior {
+  height: 100vh;
+}
+
+.table-listarOrganizadores {
+  border: darkgray !important;
+}
+
+.trash-listarOrganizadores {
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+@media (min-width: 420px) {
+  .trash-listarOrganizadores {
+    margin-top: 0;
+  }
+}
+
+.span-modal-deletar-organizador {
+  font-size: 14px;
+}

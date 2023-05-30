@@ -1,0 +1,86 @@
+@use '../../Variables' as vars;
+
+.between{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   max-width: 250px;
+   font-size: medium;
+//    font-weight: bolder;
+}
+
+.txt {
+    font-size:small;
+}
+
+.formStyle {
+    padding-top: 1rem;
+}
+
+.formNumber{
+    padding-top: 1rem;
+    max-width: 250px;
+}
+
+.name {
+  padding: 5rem;
+}
+
+
+#textOne{
+    color: #A7A7A7;
+}
+
+.box{
+    box-shadow:  0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;;
+    
+}
+
+.input{
+    
+    border: none ;
+    border-bottom: solid 1px #A7A7A7;
+    border-radius: 0px;
+    margin-bottom: 30px;
+}
+
+.imageSrc{
+    width: 100%;
+height: 202px;
+
+}
+
+.master {
+    max-width: 650px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-top: 8rem;
+}
+
+.buttonR {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonDiv{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display:flex ;
+    justify-content: flex-end;
+}
+
+.buttonRegisterLocation {
+    padding-top: 1.5rem;
+}
+
+.pencil {
+  margin-left: 10px;
+}
+
+.event-span-error {
+    color: vars.$danger;
+    font-size: small;
+}
+
+

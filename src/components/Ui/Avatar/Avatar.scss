@@ -1,0 +1,64 @@
+@use '../../../Variables' as vars;
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container-name-nickname{
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar-nickName{
+    color: #757575;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.avatar-initials{
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.avatar-display-name {
+    margin-left: 10px;
+}
+
+.circle{
+    border: 4px solid transparent;
+    background: rgba(76, 0, 130, 0.249);
+    background: radial-gradient(circle, rgba(76, 0, 130, 0.285) 0%, rgba(240, 70, 252, 0.251) 100%);
+    border-radius: 100%;
+}
+
+.avatar-image {
+    background-color: #efefef6e;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-image i {
+    font-size: 38px;
+    color: #ccc
+}
+
+.avatar-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit-icon{
+    position: absolute;
+    border: none;
+    color: vars.$secondary;
+    font-size: 1.2rem;
+    bottom: 0px;
+    cursor: pointer;
+}

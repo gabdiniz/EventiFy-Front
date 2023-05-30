@@ -1,0 +1,119 @@
+@use '../../Variables' as vars;
+
+/* Search */
+.search-box-mobile {
+    margin: 81px auto;
+    background: vars.$primary;
+    height: 30px;
+    border-radius: 30px;
+    padding: 22px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: 0 0 6px 0 #fff;
+}
+
+.search-box-mobile:hover .input-search-mobile {
+    width: 150px;
+}
+
+.search-box-mobile .input-search-mobile {
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    outline: none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+    color: #fff;
+}
+
+.icon-search-mobile {
+    color: #fff;
+}
+
+/* Search */
+
+.container-participants-informations {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    z-index: -1;
+    max-width: 720px !important;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+}
+
+.profile-informations {
+    padding-top: 15px;
+}
+
+.space-div-header {
+    width: 10%;
+}
+
+.search-box-desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .subheader-profile {
+        display: none;
+    }
+
+    .desktop-display {
+        display: block;
+        background-color: vars.$primary;
+    }
+
+    .search-box-desktop {
+        margin: 81px auto;
+        background: #fff;
+        height: 30px;
+        border-radius: 30px;
+        padding: 22px 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: 1s;
+        box-shadow: 0 0 6px 0 #3E1946;
+    }
+
+    .search-box-desktop:hover .input-search-desktop {
+        width: 300px;
+    }
+
+    .search-box-desktop .input-search-desktop {
+        background: transparent;
+        border: none;
+        text-transform: uppercase;
+        outline: none;
+        width: 0px;
+        font-weight: 500;
+        font-size: 16px;
+        transition: 0.8s;
+    }
+
+    .icon-search-desktop {
+        color: vars.$primary;
+    }
+
+}

@@ -1,0 +1,91 @@
+@use '../../Variables' as vars;
+
+.sidebar {
+    width: 15%;
+    height: 100vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 6px -4px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: white; // Cor de fundo da barra de rolagem
+    }
+}
+
+.sidebar a {
+    position: relative;
+    text-decoration: none;
+    color: vars.$primary;
+}
+
+.sidebar a:hover{
+    color: vars.$primaryHover;
+}
+
+.sidebar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 30px;
+    width: 50%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.sidebar a:hover::after,
+.sidebar a:focus::after,
+.sidebar a:active::after {
+    background-color: vars.$primary !important;
+}
+
+.logo-container{
+    width: 200px;
+    height: 200px;
+    margin-top: 80px;
+}
+
+.logo-container img {
+    filter: invert(85%) sepia(60%) saturate(2248%) hue-rotate(267deg) brightness(97%) contrast(111%);
+    width: 100%;
+}
+
+.sidebar ul{
+    padding-left: 10px !important;
+    margin-top: 30px;
+}
+
+.sidebar ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.icons-sidebar{
+    color: vars.$primary;
+    margin-right: 10px;
+}
+
+.avatar-sidebar{
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1330px) {   
+     .sidebar {
+        width: 20%;
+    }
+}

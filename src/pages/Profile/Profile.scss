@@ -1,0 +1,169 @@
+@use '../../Variables' as vars;
+
+.section-styler{
+    padding-top: 4rem;
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+.profile-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    position: fixed;
+    width: 100%;
+}
+
+.subheader-profile {
+    width: 100%;
+    height: 160px;
+    background-color: vars.$primary;
+    padding: 15px;
+    color: white;
+    display: flex;
+    border-radius: 0 0 30px 30px;
+    padding-bottom: 100px;
+    padding-top: 70px;
+}
+
+.profile-informations{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.profile-informations-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.links-container-profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    width: 80%;
+    position: absolute;
+    top: 112%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+}
+
+.links-container-profile a{
+    color: rgb(42, 42, 42);
+    text-decoration: none;
+}
+
+.link-icons-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-data-profile{
+    margin-top: 7rem;
+}
+
+.profile-header-informations{
+    display: flex;
+    border-bottom: 1px solid #cccccc75;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.profile-header-informations button{
+    background:none;
+    border: none;
+}
+
+.profile-header-informations{
+    border: 1px solid #cccccc71;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 1px 5px rgba(151, 151, 151, 0.3)
+}
+
+.group-profile-informations{
+    margin-bottom: 15px;
+    
+}
+.isCheckinTrue{
+    color: aquamarine;
+}
+.isCheckinFalse{
+color:#ff6961;
+}
+.group-profile-informations span{
+    padding-left: 12px;
+    
+}
+
+.pl{
+    padding-left: 12px;
+}
+
+.container-group-profile-informations{
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-profile-informations label{
+    font-weight: bold;
+    width: 100%;
+    font-size: 16px;
+}
+
+.profile-informations-desktop{
+    display: none;
+}
+
+
+.dataName{
+    font-weight: 500; 
+}
+.container-data-profile {
+    margin-top: 150px !important;
+}
+
+@media (min-width: 1025px) {
+    .section-styler {
+        padding-top: 1rem;
+    }
+    .profile-container {
+        display: none;
+    }
+    .container-data-profile{
+        max-width: 720px !important;
+    }
+
+    .links-container-profile{
+        display: none;
+    }
+    
+    .profile-informations-desktop{
+        display: flex;
+    }
+}
+
+@media (max-width: 1023px) {
+    .btn-profile-none {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 898px) {
+    .container-data-profile {
+        max-width: 600px !important;
+    }
+}

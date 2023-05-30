@@ -1,0 +1,294 @@
+@use '../../Variables' as vars;
+
+.card-post {
+    background-color: vars.$white;
+    border: none;
+    border-radius: 40px !important;
+    width: 450px !important;
+    position: relative;
+    min-height: 260px;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, .3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #4CB294 !important;
+    border-radius: 8px;
+}
+
+.card-post-header {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 18px;
+}
+
+.card-message-header {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 18px;
+}
+
+.card-post-options {
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+    gap: 22px;
+}
+
+.icons-card-post {
+    color: rgb(108, 107, 107);
+}
+
+.icons-card-post:hover {
+    color: rgb(50, 50, 50);
+}
+
+.card-post-options button {
+    border: none;
+    background: none;
+    transition: 0.3s;
+}
+
+.card-post-options button:hover {
+    color: rgba(56, 56, 56, 0.728);
+}
+
+
+.card-post-name-nickname {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.card-message-name-nickname {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.card-post-name {
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.card-message-name {
+    font-weight: 550;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.card-post-nickname {
+    font-size: 16px;
+}
+
+.card-message-nickname {
+    font-size: 13px;
+}
+
+
+.card-post-thumb-container {
+    cursor: pointer;
+}
+
+.see-more {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    font-weight: bold;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: background-color 0.3s, display 0s 0.3s;
+}
+
+.card-post-thumb-container:hover .see-more {
+    display: block;
+    transition-delay: 0s;
+}
+
+.card-post-thumb {
+    border-radius: 0 0 40px 40px;
+    max-height: 350px;
+    height: auto;
+    object-fit: contain;
+    width: 100% !important;
+}
+
+.card-post-thumb-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    min-height: 60px;
+}
+
+.card-post-title-thumb {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.card-post-date-thumb {
+    float: right;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.custom-modal {
+    width: 80%;
+    max-height: 90vh;
+}
+
+
+
+/* Modal */
+
+.modal-post-detail .modal-content {
+    height: auto;
+}
+
+.modal-post-detail .modal-header {
+    border-bottom: 0px !important;
+    align-items: center;
+}
+
+.modal-post-detail .modal-header button {
+    background: transparent url(../../assets/icons/closeModal.png) no-repeat !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-img-post-detail {
+    width: 100%;
+}
+
+.container-img-post-detail img {
+    width: 100%;
+    border-radius: 10px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.content-detail-post {
+    margin-top: 20px;
+
+}
+
+.content-detail-post h5 {
+    font-weight: 600;
+}
+
+.description-detail-post {
+    width: 100%;
+    border: solid 1px #cccccc82;
+    border-radius: 10px;
+    padding: 8px;
+    max-width: 100%;
+    height: 6.2em;
+    max-height: 6.2em;
+    line-height: 1.1em;
+    overflow: auto;
+}
+
+.desciption-label {
+    color: #ccc;
+}
+
+/* barra de rolagem  */
+
+description-detail-post {
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #fff;
+}
+
+.description-detail-post::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.description-detail-post::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+.description-detail-post::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.card-post-summary-sem-img {
+    height: 80px;
+    overflow: hidden;
+}
+
+.card-post-summary-description-sem-img {
+    margin-bottom: 10px;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical;
+    padding: 18px;
+}
+
+.card-post-summary {
+    height: 60px;
+    overflow: hidden;
+}
+
+.card-post-summary-description {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    padding: 18px;
+    padding-bottom: 0;
+}
+
+.card-post-summary-description::after {
+    content: "...";
+    display: inline-block;
+    vertical-align: top;
+    width: 1em;
+}
+
+@media (min-width: 200px) and (max-width: 800px) {
+    .card-post {
+        width: 350px !important;
+    }
+
+    .card-message {
+        width: 350px !important;
+    }
+}

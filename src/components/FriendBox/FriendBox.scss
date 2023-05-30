@@ -1,0 +1,132 @@
+@use '../../Variables' as vars;
+
+.box-friends-container{
+    position: relative !important;
+    display: flex !important;
+    width: 300px !important;
+    height: 180px !important;
+    background: #ccc ;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, .3);
+    border-color: transparent;
+}
+.icon-block-friendbox {
+    color: #b5b2b2;
+    font-size: 30px;
+    padding-top: 6px;
+    padding-right: 6px;
+}
+
+.icon-block-friendbox-div :hover {
+    color: #ff6961;
+    transition: 0.4s;
+}
+
+.icon-block-friendbox-div :focus {
+    color: #ff6961;
+    transition: 0.4s;
+}
+
+.icon-esquerda-friendbox-inv {
+    width: 30px;
+    padding-top: 6px;
+    padding-left: 6px;
+}
+
+.name-box {
+    width: 250px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.box-friends-profile{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background-size: cover;
+    background-position: center;
+    border: 3px rgba(255, 255, 255, 0.7) solid;
+    box-shadow: 0px 0px 15px #aaa;
+    background: vars.$secondary;
+}
+
+.box-friends-profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.friends-initials{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.name-box{
+    text-align: center;
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: #4F7091;
+    font-size: 22px;
+}
+
+.user-nickname-box{
+    position: absolute;
+    top: 98px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.btn-follow {
+    background: vars.$info;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-unfollow {
+    cursor: pointer;
+    background-color: vars.$alert;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-delete{
+    color: #fff !important;
+}
+
+.modal-delete-friendship .modal-footer{
+    border-top: none;
+}

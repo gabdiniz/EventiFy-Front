@@ -1,0 +1,132 @@
+@use '../../Variables' as vars;
+
+.container-talk {
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register-talk {
+    padding: 30px;
+    border-radius: 8px;
+    width: 650px;
+    margin: auto;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.botao-talk {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-talk {
+    margin-top: 20px !important;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+    width: 40% !important;
+    font-family:sans-serif;
+    font-weight: 100;
+    font-size: small;
+    margin: 10px;
+}
+
+.btn-talk:hover {
+    transform: scale(1.025);
+}
+
+.form-control::placeholder {
+    font-family:sans-serif;
+    /* font-weight: 600; */
+    font-size: small;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+label{
+    padding-left: 12px;
+    font-family:sans-serif;
+    font-weight: 600;
+    font-size: small;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.talk-datetime-local--input input[type="datetime-local"] {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.talk-datetime-local-input {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 8px 16px;
+    cursor: pointer;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 400 !important;
+    font-size: small;
+}
+
+
+.talk-datetime-local-input:focus {
+    text-decoration: none;
+    border-bottom: rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
+.talk-input-select {
+    
+    font-family:sans-serif;
+    font-size: small;
+}
+
+.talk-span-error {
+    color: vars.$danger;
+    font-size: small;
+}
+
+@media (max-width: 767px) {
+    .register-talk {
+        width: 350px;
+    }
+
+    .botao-talk {
+        padding-top: 30px;
+    }
+
+    .btn-talk {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container-talk{
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .register-talk {
+        padding: 30px;
+        height: 600px;
+        margin-top: 100px;
+        /* margin: auto; */
+    }
+
+    .btn-talk {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .register-talk {
+        padding: 30px;
+        width: 725px;
+    }
+
+    .btn-talk {
+        margin-top: 40px;
+        width: 50%;
+    }
+}

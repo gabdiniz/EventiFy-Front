@@ -1,0 +1,149 @@
+@use '../../Variables' as vars;
+
+.container-center-login{
+    display: none;
+}
+
+.form-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("../../assets/images/background/bg-mobile-noLogo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.form-check-input:checked {
+    background-color: vars.$primary !important;
+    border-color: vars.$primary !important;
+}
+
+.form-check-input {
+    width: 40px !important;
+    height: 20px !important;
+}
+
+.div-form-check {
+    width: 100px !important;
+}
+
+.form-check-label {
+    margin-left: 10px;
+}
+
+.divider-layout-desktop{
+    background-color: aliceblue;
+    width: 40%;
+}
+
+.form-container{
+    background-image: url("../../assets/images/background/bg-mobile-noLogo.png");
+}
+
+.link-password a{
+    color: black;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.link-password {
+    font-size: 13px;
+}
+
+.link-password a:hover{
+   color: #3C1053;
+   font-weight: 500;
+}
+
+.senha-incorreta-politica{
+    color: #ff6961;
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.buttons button {
+    width: 100%;
+}
+
+.form-container-mobile{
+    padding: 20px;
+}
+
+.register-page{
+    bottom: 0px;
+}
+
+/* novo */
+/* Desktop */
+
+@media (min-width: 500px) {
+    .container-login {
+        background-image: url("../../assets/planodefundo_entrar.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container-center-login {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .form-container {
+        box-shadow: 0 5px 9px rgba(0, 0, 0, .3);
+        background-image: url("../../assets/images/background/bg-mobile-noLogo.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 30px;
+        height: 800px;
+        width: 450px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container-group {
+        width: 350px;
+    }
+
+    .form-container-mobile{
+        display: none;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 350px) and (max-width: 380px) {
+    .form-container-mobile {
+        background-image: url("../../assets/images/background/bg-mobile-noLogo.png");
+    }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 851px) {    
+    .form-container-mobile{
+        background-image: url("../../assets/images/background/bg-mobile-noLogo.png");
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 740px) {    
+    .form-container-mobile{
+        background-image: url("../../assets/images/background/bg-mobile-noLogo.png");
+    }
+}
+
+@media only screen and (min-width: 820x) and (max-width: 1180px) {    
+    .form-container-mobile{
+        background-image: url("../../assets/images/background/bg-mobile-noLogo.png");
+    }
+}

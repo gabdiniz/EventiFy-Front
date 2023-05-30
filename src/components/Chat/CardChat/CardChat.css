@@ -1,0 +1,252 @@
+.card-chat {
+    background-color: #3b105382 !important;
+    border: none !important;
+    border-radius: 40px !important;
+    width: 450px !important;
+    position: relative !important;
+    min-height: 150px !important;
+}
+
+.card-chat-ele {
+    background-color: #ffffff !important;
+    border: none !important;
+    border-radius: 40px !important;
+    width: 450px !important;
+    position: relative !important;
+    min-height: 150px !important;
+}
+
+.icons-card-chat {
+    color: rgb(108, 107, 107) !important;
+}
+
+.icons-card-chat:hover {
+    color: rgb(50, 50, 50) !important;
+}
+
+.card-chat-summary {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.card-chat-header {
+    margin-bottom: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 18px !important;
+}
+
+.card-chat-options {
+    display: flex !important;
+    justify-content: flex-end !important;
+    width: 40% !important;
+    gap: 22px !important;
+}
+
+.icons-card-chat {
+    color: rgb(108, 107, 107) !important;
+    cursor: pointer !important;
+}
+
+.icons-card-chat:hover {
+    color: rgb(50, 50, 50) !important;
+}
+
+.card-chat-options button {
+    border: none !important;
+    background: none !important;
+    transition: 0.3s !important;
+}
+
+.card-chat-options button:hover {
+    color: rgba(56, 56, 56, 0.728) !important;
+}
+
+
+.card-chat-name-nickname {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: 15px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    width: 100% !important;
+}
+
+.card-chat-name {
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    width: 100% !important;
+}
+
+.card-chat-nickname {
+    font-size: 16px !important;
+}
+
+
+
+
+.see-more {
+    display: none !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    font-weight: bold !important;
+    color: white !important;
+    padding: 10px 30px !important;
+    border-radius: 20px !important;
+    transition: background-color 0.3s, display 0s 0.3s !important;
+}
+
+.card-chat-thumb-container:hover .see-more {
+    display: block !important;
+    transition-delay: 0s !important;
+}
+
+.card-chat-thumb {
+    border-radius: 0 0 40px 40px !important;
+    height: 200px !important;
+    object-fit: cover !important;
+}
+
+.card-chat-thumb-footer {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    padding: 10px !important;
+    border-radius: 0 0 10px 10px !important;
+    color: #fff !important;
+    border-bottom-left-radius: 40px !important;
+    border-bottom-right-radius: 40px !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    min-height: 10px !important;
+}
+
+.card-chat-title-thumb {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    width: 100% !important;
+}
+
+.card-chat-date-thumb {
+    float: right !important;
+    margin-right: 10px !important;
+    font-size: 14px !important;
+}
+
+.custom-modal {
+    width: 80% !important;
+    max-height: 90vh !important;
+}
+
+
+
+/* Modal */
+
+.modal-chat-detail .modal-content {
+    height: auto !important;
+}
+
+.modal-chat-detail .modal-header {
+    border-bottom: 0px !important;
+    align-items: center !important;
+}
+
+.container-img-chat-detail {
+    width: 100% !important;
+}
+
+.container-img-chat-detail img {
+    width: 100% !important;
+    border-radius: 10px !important;
+    height: 300px !important;
+    object-fit: cover !important;
+}
+
+.content-detail-chat {
+    margin-top: 20px !important;
+
+}
+
+.content-detail-chat h5 {
+    font-weight: 600 !important;
+}
+
+.description-detail-chat {
+    width: 100% !important;
+    border: solid 1px #cccccc82 !important;
+    border-radius: 10px !important;
+    padding: 8px !important;
+    max-width: 100% !important;
+    height: 6.2em !important;
+    max-height: 6.2em !important;
+    line-height: 1.1em !important;
+    overflow: auto !important;
+}
+
+.desciption-label {
+    color: #ccc !important;
+}
+
+/* barra de rolagem  */
+
+.description-detail-chat {
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #ccc #fff !important;
+}
+
+.description-detail-chat::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;
+}
+
+.description-detail-chat::-webkit-scrollbar-thumb {
+    background-color: #ccc !important;
+    border-radius: 3px !important;
+}
+
+.description-detail-chat::-webkit-scrollbar-track {
+    background-color: #fff !important;
+    border-radius: 3px !important;
+}
+
+.card-chat-summary {
+    margin-bottom: 10px !important;
+    overflow: auto !important;
+    text-overflow: ellipsis !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    padding: 18px !important;
+    padding-bottom: 40px !important;
+}
+
+@media (min-width: 200px) and (max-width: 800px) {
+    .card-chat {
+        width: 350px !important;
+    }
+
+    .card-chat-ele {
+        width: 350px !important;
+    }
+}
+
+@media(max-width: 390px) {
+    .card-chat {
+        width: 250px !important;
+    }
+
+    .card-chat-ele {
+        width: 250px !important;
+
+    }
+}

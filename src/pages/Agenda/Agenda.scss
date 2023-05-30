@@ -1,0 +1,157 @@
+@import "../../App.scss";
+
+.agenda {
+    padding-top: 8rem;
+    min-height: 100vh;
+}
+
+.container-agenda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // z-index: -1;
+    max-width: 650px !important;
+    margin: auto !important;
+    border-radius: 8px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.div-agenda{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+}
+
+.div-agenda h3{
+    color: $primary;
+    display: flex;
+    justify-content: center;
+}
+
+
+.tab-agenda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+
+.card-agenda{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 8px;
+    margin: auto;
+    width: 80%;
+    margin-top: 8px;
+}
+
+.spanflex{
+    align-self: flex-end;
+}
+
+.card-agenda:hover{
+    border: 2px solid $primary;
+}
+
+.collapse-info-agenda{
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+
+.card-info-agenda{
+    display: flex;
+    flex-direction: column;
+}
+
+#card-body-info-agenda{
+    padding-bottom: 0;
+}
+
+#span-speaker{
+    align-self: center;
+    color: $primary;
+}
+
+.card-info-agenda-speaker{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#span-description-agenda{
+    text-align: justify;
+}
+
+.info-speaker-agenda{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 8px;
+}
+
+.btn-agenda{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .agenda{
+        padding-bottom: 2rem;
+        padding-top: 8rem;
+    }
+
+    .container-agenda {
+        max-width: 350px !important;
+        margin-bottom: 100px;
+    }
+
+    .card-info-agenda-speaker{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .info-speaker-agenda {
+        margin-top: 3px;
+    }
+
+    #span-description-agenda {
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .agenda{
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+
+    .container-agenda {
+        padding: 30px;
+        height: 600px;
+        margin-top: 100px;
+        margin: auto;
+        height: 80vh; 
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-agenda {
+        padding: 30px;
+        width: 725px;
+    }
+}

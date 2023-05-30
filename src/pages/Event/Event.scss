@@ -1,0 +1,76 @@
+.container-evento-principal {
+  padding-top: 75px !important;
+}
+
+.container-evento {
+  max-width: 650px !important;
+}
+
+.container-evento {
+  padding: 0;
+}
+
+.div-button-registrar-evento {
+  justify-content: center !important;
+}
+
+.capa-evento {
+  background-repeat: repeat;
+  background-size: cover;
+  height: 250px !important;
+  max-width: 650px !important;
+  border-radius: 0 !important;
+  }
+
+.info-evento {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.avatar-largura {
+  flex-direction: column;
+  align-items: center;
+  max-width: 650px;
+}
+
+.texto-avatar-span {
+  font-size: small;
+  text-align: center;
+  max-width: fit-content;
+}
+.inscritos-numero{
+  color: #ff7c00;
+  font-weight: 600;
+  font-size:20px;
+}
+.checkin-numero{
+  color:#4CB294;
+  font-weight: 600;
+  font-size: 20px;
+}
+.data-title{
+  font-size: 20px;
+}
+
+@media (min-width: 650px) {
+  .info-evento {
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    
+  }
+  .card-event-eventos{
+    margin-top: 50px !important;
+  }
+  .capa-evento {
+    height: 340px !important;
+    margin-top: 50px !important;
+  }
+  .div-button-registrar-evento {
+    padding: 10px;
+    justify-content: end !important;
+  }
+}
+
+

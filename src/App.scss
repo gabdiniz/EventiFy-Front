@@ -1,0 +1,50 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$primary: #3E1946;
+$info: #2C82BB;
+$secondary: #FD2B7A;
+$success: #4CB294;
+$white: #FFF;
+$transparent: transparent;
+$black: transparent;
+$primaryHover : #5E2C91;
+$successHover : #286d58;
+$alert: #ff7c00;
+$danger: red;
+$gray: #EBEBEB;
+
+$theme-colors: (
+    "primary": $primary,
+    "info": $info,
+    "secondary": $secondary,
+    "success": $success,
+    "white": $white,
+    "danger": $danger,
+    "gray": $gray
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+$container-max-widths: (
+    sm: 576px,
+    md: 720px,
+    lg: 960px,
+    xl: 720px,
+);
+
+
+
+:export {
+    success: $success;
+    primary: $primary;
+    info: $info;
+    secondary: $secondary;
+    transparent: $transparent;
+    black: $black;
+    alert: $alert;
+    danger: $danger;
+    primaryHover: $primaryHover;
+    successHover: $successHover;
+    gray:$gray;
+    white: $white
+}
