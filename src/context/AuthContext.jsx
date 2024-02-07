@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     //dentro dessa função eu pego o token, decodifico ele com jwtDecode e armazeno ele em localStorage
     const userLogin = async (data) => {
         try {
-            const response = await axios.post(`${process.env.REACT_APP_IP}:3001/auth/login`, data);
+            const response = await axios.post(`${process.env.REACT_APP_IP}/auth/login`, data);
             const token = response.data.token;
             const decodedToken = jwtDecode(token);
 
@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
         
         const { id } = JSON.parse(localStorage.getItem('userInfo'))
         
-        axios.get(`${process.env.REACT_APP_IP}:3001/users/?id=${id}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+        axios.get(`${process.env.REACT_APP_IP}/users/?id=${id}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((user) => {
 
         const info = {

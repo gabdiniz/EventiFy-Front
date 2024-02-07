@@ -80,7 +80,7 @@ export function ResetPassword() {
     }
 
     axios
-      .post(process.env.REACT_APP_IP+":3001/auth/change-password", data)
+      .post(process.env.REACT_APP_IP+"/auth/change-password", data)
       .then((response) => {
         toast.success(response.data.message, {
           position: "bottom-right",

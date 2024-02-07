@@ -36,7 +36,7 @@ export function Participants() {
 
     useEffect(() => {
         axios
-            .get(`${process.env.REACT_APP_IP}:3001/users/?id=${idUser}`, {
+            .get(`${process.env.REACT_APP_IP}/users/?id=${idUser}`, {
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
             })
             .then((user) => {
@@ -61,7 +61,7 @@ export function Participants() {
 
     async function listParticipants() {
         await axios
-            .get(`${process.env.REACT_APP_IP}:3001/registrations/participantes/${id}`, {
+            .get(`${process.env.REACT_APP_IP}/registrations/participantes/${id}`, {
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
             })
             .then((e) => {
@@ -73,7 +73,7 @@ export function Participants() {
         async function listFriends() {
             try {
                 const response = await axios.get(
-                    `${process.env.REACT_APP_IP}:3001/friendships/?blocked=true&id=${idUser}`,
+                    `${process.env.REACT_APP_IP}/friendships/?blocked=true&id=${idUser}`,
                     {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`,

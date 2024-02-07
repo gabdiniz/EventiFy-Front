@@ -64,7 +64,7 @@ export function RegisterTalk() {
 
   async function listarEvents() {
     await axios
-      .get(process.env.REACT_APP_IP+":3001/events", config)
+      .get(process.env.REACT_APP_IP+"/events", config)
       .then((response) => {
         setEvents(response.data);
       })
@@ -75,7 +75,7 @@ export function RegisterTalk() {
 
   async function listarSpeakers() {
     await axios
-      .get(process.env.REACT_APP_IP+":3001/speakers", config)
+      .get(process.env.REACT_APP_IP+"/speakers", config)
       .then((response) => {
         setSpeakers(response.data);
       })
@@ -104,7 +104,7 @@ export function RegisterTalk() {
     try {
       await schema.validate(data);
       axios
-        .post(process.env.REACT_APP_IP+":3001/talks", data, config)
+        .post(process.env.REACT_APP_IP+"/talks", data, config)
         .then(() => {
           toast.success("Palestra cadastrada com sucesso!", {
             position: "bottom-right",
@@ -133,7 +133,7 @@ export function RegisterTalk() {
         eventId: data.eventId,
         speakerId: data.speakerId
       }
-      await axios.post(process.env.REACT_APP_IP+":3001/eventspeakers", eventData, config)
+      await axios.post(process.env.REACT_APP_IP+"/eventspeakers", eventData, config)
     } catch (error) {
       console.log(error)
     }

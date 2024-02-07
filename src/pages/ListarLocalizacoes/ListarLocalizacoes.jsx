@@ -65,7 +65,7 @@ export function ListarLocalizacoes() {
 
   function onDelete() {
     handleCloseDeleteModal()
-    axios.delete(`${process.env.REACT_APP_IP}:3001/locations/${idDelete}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.delete(`${process.env.REACT_APP_IP}/locations/${idDelete}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((e) => {
         listarLocalizacoes();
         toast.success("A localização foi removida.", {
@@ -79,7 +79,7 @@ export function ListarLocalizacoes() {
   };
 
   function listarLocalizacoes() {
-    axios.get(process.env.REACT_APP_IP+":3001/locations", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.get(process.env.REACT_APP_IP+"/locations", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((e) => {
         setLocations(e.data);
         setEditouLocation(false);

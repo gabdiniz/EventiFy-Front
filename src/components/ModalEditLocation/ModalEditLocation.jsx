@@ -142,7 +142,7 @@ export function ModalEditLocation({ loc, show, handleClose }) {
 
     async function onLocation(data) {
         const dataValid = await schemaLocation.validate(data);
-        await axios.put(`${process.env.REACT_APP_IP}:3001/locations/${loc.id}`, dataValid, {
+        await axios.put(`${process.env.REACT_APP_IP}/locations/${loc.id}`, dataValid, {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         }).then((response) => {
             toast.success("Localização editada com sucesso.", {

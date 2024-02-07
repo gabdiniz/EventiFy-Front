@@ -35,7 +35,7 @@ export function Sidebar() {
  
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/users/?id=${id}`, {
+      .get(`${process.env.REACT_APP_IP}/users/?id=${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((user) => {

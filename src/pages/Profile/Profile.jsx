@@ -84,7 +84,7 @@ export function Profile() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/users/?id=${id}`, {
+      .get(`${process.env.REACT_APP_IP}/users/?id=${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((user) => {
@@ -104,7 +104,7 @@ export function Profile() {
         if (isDataUpdated) {
           setIsDataUpdated(false);
           axios
-            .get(`${process.env.REACT_APP_IP}:3001/users/?id=${id}`, {
+            .get(`${process.env.REACT_APP_IP}/users/?id=${id}`, {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
               },
@@ -142,7 +142,7 @@ export function Profile() {
       delete data.nickname
     }
     axios
-      .put(`${process.env.REACT_APP_IP}:3001/users/${id}/profile`, data, { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } })
+      .put(`${process.env.REACT_APP_IP}/users/${id}/profile`, data, { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } })
       .then((response) => {
 
         updateUser();
@@ -167,7 +167,7 @@ export function Profile() {
   function handleEditFullName(data) {
 
     axios
-      .put(`${process.env.REACT_APP_IP}:3001/users/${id}`, data, { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } })
+      .put(`${process.env.REACT_APP_IP}/users/${id}`, data, { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } })
       .then((response) => {
 
         updateUser();
@@ -191,7 +191,7 @@ export function Profile() {
 
   function deleteMyAccount(id) {
     axios
-      .delete(`${process.env.REACT_APP_IP}:3001/users/${id}`, {
+      .delete(`${process.env.REACT_APP_IP}/users/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -207,7 +207,7 @@ export function Profile() {
 
   function handleEditBio(data) {
     axios
-      .put(`${process.env.REACT_APP_IP}:3001/users/${id}/bio`, data, {
+      .put(`${process.env.REACT_APP_IP}/users/${id}/bio`, data, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -233,13 +233,13 @@ export function Profile() {
     const user = JSON.parse(localStorage.getItem('userInfo'));
     let rota;
     if (user.role === 'participante') {
-      rota = `${process.env.REACT_APP_IP}:3001/users/${user.id}`
+      rota = `${process.env.REACT_APP_IP}/users/${user.id}`
     } else if (user.role === 'organizador') {
-      rota = `${process.env.REACT_APP_IP}:3001/organizadores/${user.id}`
+      rota = `${process.env.REACT_APP_IP}/organizadores/${user.id}`
     } else if (user.role === 'admin') {
-      rota = `${process.env.REACT_APP_IP}:3001/admins/${user.id}`
+      rota = `${process.env.REACT_APP_IP}/admins/${user.id}`
     } else {
-      rota = `${process.env.REACT_APP_IP}:3001/superadmin/${user.id}`
+      rota = `${process.env.REACT_APP_IP}/superadmin/${user.id}`
     };
 
     axios
@@ -282,7 +282,7 @@ export function Profile() {
     function validCodes() {
       if (user) {
         axios
-          .get(`${process.env.REACT_APP_IP}:3001/registrations/user/${id}`, {
+          .get(`${process.env.REACT_APP_IP}/registrations/user/${id}`, {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
           })
           .then((response) => {
@@ -306,7 +306,7 @@ export function Profile() {
   const generatePDF = (userId, eventId) => {
     setGeneratingPDF(true);
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/registrations/pdf/${userId}/${eventId}`, {
+      .get(`${process.env.REACT_APP_IP}/registrations/pdf/${userId}/${eventId}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         responseType: "blob",
       })

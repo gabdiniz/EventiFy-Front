@@ -64,7 +64,7 @@ export function ListarPalestras() {
   }, [eventos, palestra])
 
   async function listarEventos() {
-    await axios.get(process.env.REACT_APP_IP+":3001/events", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    await axios.get(process.env.REACT_APP_IP+"/events", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((response) => {
         setEventos(response.data);
       })
@@ -77,7 +77,7 @@ export function ListarPalestras() {
   }
 
   async function listarPalestras() {
-    await axios.get(process.env.REACT_APP_IP+":3001/talks", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    await axios.get(process.env.REACT_APP_IP+"/talks", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((response) => {
         const palestrasTotais = response.data;
 
@@ -98,7 +98,7 @@ export function ListarPalestras() {
 
   function onDelete() {
     handleCloseDeleteModal()
-    axios.delete(`${process.env.REACT_APP_IP}:3001/talks/${idDelete}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.delete(`${process.env.REACT_APP_IP}/talks/${idDelete}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((e) => {
         listarPalestras()
         toast.success("A palestra foi removido.", {

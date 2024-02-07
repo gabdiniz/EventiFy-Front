@@ -54,7 +54,7 @@ export function EditTalk() {
 
     async function listarEvents() {
         try {
-            const response = await axios.get(process.env.REACT_APP_IP+":3001/events", config);
+            const response = await axios.get(process.env.REACT_APP_IP+"/events", config);
             setEvents(response.data);
         } catch (error) {
             console.log(error);
@@ -63,7 +63,7 @@ export function EditTalk() {
 
     async function listarSpeakers() {
         try {
-            const response = await axios.get(process.env.REACT_APP_IP+":3001/speakers", config);
+            const response = await axios.get(process.env.REACT_APP_IP+"/speakers", config);
             setSpeakers(response.data);
         } catch (error) {
             console.log(error);
@@ -72,7 +72,7 @@ export function EditTalk() {
 
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_IP}:3001/talks/?id=${id}`, config)
+        axios.get(`${process.env.REACT_APP_IP}/talks/?id=${id}`, config)
             .then(response => {
                 console.log(response.data);
                 response.data.startDate = format(new Date(response.data.startDate), "yyyy-MM-dd HH:mm");
@@ -110,7 +110,7 @@ export function EditTalk() {
         delete data.updatedAt;
         
         axios
-            .put(`${process.env.REACT_APP_IP}:3001/talks/${id}`, data, config)
+            .put(`${process.env.REACT_APP_IP}/talks/${id}`, data, config)
             .then(response => {
                 toast.success("Palestra editada.", { position: "bottom-right", duration: 2000 });
                 navigate("/palestras/listar");

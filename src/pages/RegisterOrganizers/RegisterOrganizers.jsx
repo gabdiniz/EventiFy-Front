@@ -68,7 +68,7 @@ export function RegisterOrganizers() {
       });
     delete data.repetirPassword;
     axios
-      .post(process.env.REACT_APP_IP+":3001/organizadores", data, {
+      .post(process.env.REACT_APP_IP+"/organizadores", data, {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },

@@ -59,7 +59,7 @@ export function Register() {
       return null;
     }
     axios
-      .post(process.env.REACT_APP_IP+":3001/auth/cadastro", data)
+      .post(process.env.REACT_APP_IP+"/auth/cadastro", data)
       .then(() => {
         toast.success("Usuario cadastrado com sucesso.", {
           position: "bottom-right",

@@ -34,8 +34,6 @@ import { Ajuda } from "./pages/Ajuda/Ajuda";
 import { RegisterOrganizers } from "./pages/RegisterOrganizers/RegisterOrganizers";
 import { Agenda } from "./pages/Agenda/Agenda";
 
-
-
 function App() {
   return (
     <AuthProvider>

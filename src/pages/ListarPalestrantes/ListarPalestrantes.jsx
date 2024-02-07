@@ -61,7 +61,7 @@ export function ListarPalestrantes() {
   }, [role]);
 
   function listarPalestrantes() {
-    axios.get(process.env.REACT_APP_IP+":3001/speakers", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.get(process.env.REACT_APP_IP+"/speakers", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((e) => {
         setPalestrantes(e.data);
       })
@@ -72,7 +72,7 @@ export function ListarPalestrantes() {
 
   function onDelete() {
     handleCloseDeleteModal()
-    axios.delete(`${process.env.REACT_APP_IP}:3001/speakers/${idDelete}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.delete(`${process.env.REACT_APP_IP}/speakers/${idDelete}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((e) => {
         listarPalestrantes()
         setIdDelete(null)

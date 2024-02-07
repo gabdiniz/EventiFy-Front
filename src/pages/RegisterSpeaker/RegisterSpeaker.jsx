@@ -104,7 +104,7 @@ export function RegisterSpeaker() {
   function post(data) {
     console.log(data)
     axios
-      .post(process.env.REACT_APP_IP+":3001/speakers", data, config)
+      .post(process.env.REACT_APP_IP+"/speakers", data, config)
       .then(() => {
         toast.success("Palestrante cadastrato com sucesso!", {
           position: "bottom-right",

@@ -38,7 +38,7 @@ export const Avatar = (props) => {
         .then((url) => {
           toast.dismiss(toastId);
           axios
-            .put(`${process.env.REACT_APP_IP}:3001/users/${id}/profile`, { avatar: url }, { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } })
+            .put(`${process.env.REACT_APP_IP}/users/${id}/profile`, { avatar: url }, { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } })
             .then((response) => {
               toast.success("Seus dados foram editados.", {
                 position: "bottom-right",

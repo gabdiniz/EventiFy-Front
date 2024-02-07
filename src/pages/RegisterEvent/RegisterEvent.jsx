@@ -85,7 +85,7 @@ export function RegisterEvent() {
 
   async function getOrganizadores() {
     axios
-      .get(process.env.REACT_APP_IP+":3001/organizadores", {
+      .get(process.env.REACT_APP_IP+"/organizadores", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -98,7 +98,7 @@ export function RegisterEvent() {
 
   async function getLocations() {
     axios
-      .get(process.env.REACT_APP_IP+":3001/locations", {
+      .get(process.env.REACT_APP_IP+"/locations", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -122,7 +122,7 @@ export function RegisterEvent() {
         dataValid.header = url;
         delete dataValid.arquivos;
         await axios
-          .post(process.env.REACT_APP_IP+":3001/events", dataValid, {
+          .post(process.env.REACT_APP_IP+"/events", dataValid, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },

@@ -44,7 +44,7 @@ export function ListarAdmins() {
   }, [role]);
 
   function listarAdmins() {
-    axios.get(process.env.REACT_APP_IP+":3001/admins", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.get(process.env.REACT_APP_IP+"/admins", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((e) => {
         setAdmins(e.data);
       })
@@ -55,7 +55,7 @@ export function ListarAdmins() {
 
   function onDelete() {
     handleClose();
-    axios.delete(`${process.env.REACT_APP_IP}:3001/admins/${idDelete}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.delete(`${process.env.REACT_APP_IP}/admins/${idDelete}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((e) => {
         listarAdmins();
         setIdDelete(null);

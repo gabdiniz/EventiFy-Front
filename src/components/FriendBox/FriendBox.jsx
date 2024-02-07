@@ -36,7 +36,7 @@ export function FriendBox(props) {
   }
 
   function onBlock() {
-    axios.put(`${process.env.REACT_APP_IP}:3001/friendships/${props.friendshipId}`, { blocked: true }, { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } })
+    axios.put(`${process.env.REACT_APP_IP}/friendships/${props.friendshipId}`, { blocked: true }, { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } })
       .then((response) => {
         toast.success("Usuário bloqueado.", {
           position: "bottom-right",
@@ -58,7 +58,7 @@ export function FriendBox(props) {
 
     try {
       const response = await axios.post(
-        process.env.REACT_APP_IP+":3001/friendships",
+        process.env.REACT_APP_IP+"/friendships",
         {
           senderId,
           receiverId,
@@ -79,7 +79,7 @@ export function FriendBox(props) {
   const removeFriendship = async (friendshipId) => {
     try {
       const response = await axios.delete(
-        `${process.env.REACT_APP_IP}:3001/friendships/${friendshipId}`,
+        `${process.env.REACT_APP_IP}/friendships/${friendshipId}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

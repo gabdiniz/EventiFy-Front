@@ -47,7 +47,7 @@ export function Timeline() {
 
   function getUser(id) {
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/users?id=${id}`, {
+      .get(`${process.env.REACT_APP_IP}/users?id=${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -67,7 +67,7 @@ export function Timeline() {
   function listPosts() {
     //todos os posts
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/posts`, {
+      .get(`${process.env.REACT_APP_IP}/posts`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -79,7 +79,7 @@ export function Timeline() {
   function listMyPosts() {
     //posts usuario logado
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/posts?userId=${id}`, {
+      .get(`${process.env.REACT_APP_IP}/posts?userId=${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -90,7 +90,7 @@ export function Timeline() {
   function listFriendsPosts() {
     //posts amigos de usuario logado
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/posts?usuarioLogado=${id}`, {
+      .get(`${process.env.REACT_APP_IP}/posts?usuarioLogado=${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -107,7 +107,7 @@ export function Timeline() {
   function deleteMyPost(postId) {
     //deletar post de usuario logado
     axios
-      .delete(`${process.env.REACT_APP_IP}:3001/posts/${postId}`, {
+      .delete(`${process.env.REACT_APP_IP}/posts/${postId}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {

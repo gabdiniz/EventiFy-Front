@@ -65,7 +65,7 @@ export function SuperAdmin() {
       delete data.role;
       delete data.repetirSenha;
       axios
-        .post(process.env.REACT_APP_IP+":3001/admins", data, {
+        .post(process.env.REACT_APP_IP+"/admins", data, {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         })
         .then((e) => {
@@ -85,7 +85,7 @@ export function SuperAdmin() {
       delete data.role;
       delete data.repetirSenha;
       axios
-        .post(process.env.REACT_APP_IP+":3001/organizadores", data, {
+        .post(process.env.REACT_APP_IP+"/organizadores", data, {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         })
         .then(() => {

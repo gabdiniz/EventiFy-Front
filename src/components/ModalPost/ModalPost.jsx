@@ -50,7 +50,7 @@ export function ModalPost({ evento, user, show, handleClose }) {
         }
         const formValidado = await schema.validate(data);
         axios
-            .post(`${process.env.REACT_APP_IP}:3001/posts`, formValidado, {
+            .post(`${process.env.REACT_APP_IP}/posts`, formValidado, {
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
             })
             .then((response) => {
@@ -64,7 +64,7 @@ export function ModalPost({ evento, user, show, handleClose }) {
                             .then(async (url) => {
                                 const media = { link: url, postId: response.data.id };
                                 try {
-                                    await axios.post(process.env.REACT_APP_IP+":3001/medias", media, {
+                                    await axios.post(process.env.REACT_APP_IP+"/medias", media, {
                                         headers: {
                                             Authorization: `Bearer ${localStorage.getItem("token")}`,
                                         },
@@ -113,7 +113,7 @@ export function ModalPost({ evento, user, show, handleClose }) {
 
     function listarEventosInscrito(id) {
         axios
-            .get(`${process.env.REACT_APP_IP}:3001/registrations/user/${user.id}`, {
+            .get(`${process.env.REACT_APP_IP}/registrations/user/${user.id}`, {
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
             })
             .then((response) => {
@@ -126,7 +126,7 @@ export function ModalPost({ evento, user, show, handleClose }) {
 
     function litarEvent(id) {
         axios
-            .get(`${process.env.REACT_APP_IP}:3001/events?id=${id}`, {
+            .get(`${process.env.REACT_APP_IP}/events?id=${id}`, {
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
             })
             .then((response) => {

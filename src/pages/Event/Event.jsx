@@ -55,7 +55,7 @@ export function Event() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/events/?id=${id}`, {
+      .get(`${process.env.REACT_APP_IP}/events/?id=${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((e) => {
@@ -71,7 +71,7 @@ export function Event() {
 
   function listarEvent() {
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/events?id=${id}`, {
+      .get(`${process.env.REACT_APP_IP}/events?id=${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((e) => {
@@ -81,7 +81,7 @@ export function Event() {
 
   function listarEventSpeaker(id) {
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/eventspeakers?eventId=${id}`, {
+      .get(`${process.env.REACT_APP_IP}/eventspeakers?eventId=${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((e) => {
@@ -90,7 +90,7 @@ export function Event() {
   }
 
   function listarTalks(id) {
-    axios.get(`${process.env.REACT_APP_IP}:3001/talks?eventId=${id}`, {
+    axios.get(`${process.env.REACT_APP_IP}/talks?eventId=${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     }).then((response) => {
         setTalks(response.data);
@@ -100,7 +100,7 @@ export function Event() {
   function listarRegistrations() {
     axios
       .get(
-        `${process.env.REACT_APP_IP}:3001/registrations/event/${id}/user/${usuario.id}`,
+        `${process.env.REACT_APP_IP}/registrations/event/${id}/user/${usuario.id}`,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         }
@@ -117,7 +117,7 @@ export function Event() {
 
   function listPosts(id) {
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/posts/${id}`, {
+      .get(`${process.env.REACT_APP_IP}/posts/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -128,7 +128,7 @@ export function Event() {
 
   function getUser(id) {
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/users?id=${id}`, {
+      .get(`${process.env.REACT_APP_IP}/users?id=${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -140,7 +140,7 @@ export function Event() {
   }
 
   function deletePost(postId) {
-    axios.delete(`${process.env.REACT_APP_IP}:3001/posts/${postId}`, {
+    axios.delete(`${process.env.REACT_APP_IP}/posts/${postId}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     }).then(() => {
       closeDelete();
@@ -199,7 +199,7 @@ export function Event() {
 
   useEffect(() => {
    if(acesso){
-    axios.get(`${process.env.REACT_APP_IP}:3001/registrations/participantes/total/${id}`, {
+    axios.get(`${process.env.REACT_APP_IP}/registrations/participantes/total/${id}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     })
       .then(response => {
@@ -219,7 +219,7 @@ export function Event() {
   function onRegister() {
     axios
       .post(
-        process.env.REACT_APP_IP+":3001/registrations",
+        process.env.REACT_APP_IP+"/registrations",
         { userId: userId, eventId: id },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

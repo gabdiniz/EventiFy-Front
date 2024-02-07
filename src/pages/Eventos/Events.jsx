@@ -42,7 +42,7 @@ export function Events() {
   }
 
   useEffect(() => {
-    axios.get(process.env.REACT_APP_IP+":3001/events", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.get(process.env.REACT_APP_IP+"/events", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((e) => {
         setEventos(e.data);
       })

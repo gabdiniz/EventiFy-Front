@@ -16,7 +16,7 @@ export function ValidateEventSpeaker() {
 
   useEffect(() => {
     axios
-    .get(`${process.env.REACT_APP_IP}:3001/eventspeakers/checkin/${speakerId}/${eventId}`, {
+    .get(`${process.env.REACT_APP_IP}/eventspeakers/checkin/${speakerId}/${eventId}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
     .then(response => {

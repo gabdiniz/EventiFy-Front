@@ -61,14 +61,14 @@ export function ListarEventos() {
   }, [role]);
 
   useEffect(() => {
-    axios.get(process.env.REACT_APP_IP+":3001/organizadores", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.get(process.env.REACT_APP_IP+"/organizadores", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then(response => {
         setOrganizadores(response.data);
       })
       .catch(error => {
         console.error(error);
       });
-    axios.get(process.env.REACT_APP_IP+":3001/locations", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.get(process.env.REACT_APP_IP+"/locations", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then(response => {
         setLocations(response.data);
       })
@@ -78,7 +78,7 @@ export function ListarEventos() {
   }, []);
 
   function listarEventos() {
-    axios.get(process.env.REACT_APP_IP+":3001/events", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.get(process.env.REACT_APP_IP+"/events", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((e) => {
         setEventos(e.data);
       })
@@ -89,7 +89,7 @@ export function ListarEventos() {
 
   function onDelete() {
     handleCloseModalDelete()
-    axios.delete(`${process.env.REACT_APP_IP}:3001/events/${evento.id}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.delete(`${process.env.REACT_APP_IP}/events/${evento.id}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((e) => {
         listarEventos()
         setEvento(null)
@@ -124,7 +124,7 @@ export function ListarEventos() {
     delete data.updatedAt
     delete data.location
     await axios
-      .put(`${process.env.REACT_APP_IP}:3001/events/${evento.id}`, data, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+      .put(`${process.env.REACT_APP_IP}/events/${evento.id}`, data, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then(response => {
         toast.success("Evento editado com sucesso.", {
           position: "bottom-right",

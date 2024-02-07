@@ -45,7 +45,7 @@ export function ListarOrganizadores() {
   }, [role]);
 
   function listarOrganizadores() {
-    axios.get(process.env.REACT_APP_IP+":3001/organizadores", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.get(process.env.REACT_APP_IP+"/organizadores", { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((e) => {
         setOrganizadores(e.data);
       })
@@ -56,7 +56,7 @@ export function ListarOrganizadores() {
 
   function onDelete() {
     handleClose()
-    axios.delete(`${process.env.REACT_APP_IP}:3001/organizadores/${idDelete}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    axios.delete(`${process.env.REACT_APP_IP}/organizadores/${idDelete}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       .then((e) => {
         listarOrganizadores()
         setIdDelete(null)

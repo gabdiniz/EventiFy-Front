@@ -16,7 +16,7 @@
 
     useEffect(() => {
       axios
-      .get(`${process.env.REACT_APP_IP}:3001/registrations/checkin/${userId}/${eventId}`, {
+      .get(`${process.env.REACT_APP_IP}/registrations/checkin/${userId}/${eventId}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         })
       .then(response => {
@@ -29,7 +29,7 @@
     }, [userId, eventId]);
 
     function confirmCheckin(data){
-      axios.put(`${process.env.REACT_APP_IP}:3001/registrations/checkin/${userId}/${eventId}`,data,{
+      axios.put(`${process.env.REACT_APP_IP}/registrations/checkin/${userId}/${eventId}`,data,{
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }).then(response =>{
         toast.success("Check-in efetuado", {

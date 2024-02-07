@@ -16,7 +16,7 @@ export function ModalEditPost({ post, show, handleClose }) {
 
     //edição do post
     function onSubmit(data) {
-        axios.put(`${process.env.REACT_APP_IP}:3001/posts/${post.postId}`, data, {
+        axios.put(`${process.env.REACT_APP_IP}/posts/${post.postId}`, data, {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         })
             .then(response => {
@@ -36,7 +36,7 @@ export function ModalEditPost({ post, show, handleClose }) {
 
     //busca de post
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_IP}:3001/posts/?id=${post.postId}`, {
+        axios.get(`${process.env.REACT_APP_IP}/posts/?id=${post.postId}`, {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         })
             .then(response => {

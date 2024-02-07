@@ -66,7 +66,7 @@ export function EditSpeaker() {
 
     //edição do palestrante
     function put(data) {
-        axios.put(`${process.env.REACT_APP_IP}:3001/speakers/${id}`, data, config)
+        axios.put(`${process.env.REACT_APP_IP}/speakers/${id}`, data, config)
             .then(response => {
                 toast.success("Palestrante editado.", { position: "bottom-right", duration: 2000 });
                 navigate("/palestrantes/listar");
@@ -75,7 +75,7 @@ export function EditSpeaker() {
 
     //buscar palestrante
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_IP}:3001/speakers/?id=${id}`, config)
+        axios.get(`${process.env.REACT_APP_IP}/speakers/?id=${id}`, config)
             .then(response => {
                 const { fullname, description, position, company, education, avatar
                 } = response.data;

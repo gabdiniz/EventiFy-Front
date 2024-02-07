@@ -151,7 +151,7 @@ export function ModalCadastroLocation({ show, handleClose, tonavigate, listarLoc
 
     async function onLocation(data) {
         const dataValid = await schemaLocation.validate(data);
-        await axios.post(process.env.REACT_APP_IP+":3001/locations", dataValid, {
+        await axios.post(process.env.REACT_APP_IP+"/locations", dataValid, {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         }).then((response) => {
             toast.success("Localização cadastrada com sucesso.", {

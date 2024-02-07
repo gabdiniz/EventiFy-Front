@@ -33,7 +33,7 @@ export function Friends(props) {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_IP}:3001/users/?id=${id}`, {
+      .get(`${process.env.REACT_APP_IP}/users/?id=${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((user) => {
@@ -55,7 +55,7 @@ export function Friends(props) {
   async function listFriends() {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_IP}:3001/friendships?id=${id}`,
+        `${process.env.REACT_APP_IP}/friendships?id=${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

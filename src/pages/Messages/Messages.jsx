@@ -62,7 +62,7 @@ export function Messages() {
 
     async function listarAmigos() {
         try {
-            const response = await axios.get(`${process.env.REACT_APP_IP}:3001/friendships?id=${id}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
+            const response = await axios.get(`${process.env.REACT_APP_IP}/friendships?id=${id}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
             setAmigos(response.data);
             setFiltered(response.data);
 
@@ -103,7 +103,7 @@ export function Messages() {
     async function enviarMensagem(data) {
         data.sender = id;
         try {
-            await axios.post(`${process.env.REACT_APP_IP}:3001/messages?friendshipId=${friendshipId}`, data, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
+            await axios.post(`${process.env.REACT_APP_IP}/messages?friendshipId=${friendshipId}`, data, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
             listarMessages(friendshipId);
             reset();
         } catch (error) {
@@ -117,7 +117,7 @@ export function Messages() {
 
     function deleteMyMessage(messageId) {
         axios
-            .delete(`${process.env.REACT_APP_IP}:3001/messages/${messageId}`, {
+            .delete(`${process.env.REACT_APP_IP}/messages/${messageId}`, {
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
             })
             .then((response) => {
@@ -129,7 +129,7 @@ export function Messages() {
 
     async function listarMessages(friendshipId) {
         try {
-            const response = await axios.get(`${process.env.REACT_APP_IP}:3001/messages?friendshipId=${friendshipId}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
+            const response = await axios.get(`${process.env.REACT_APP_IP}/messages?friendshipId=${friendshipId}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
             setMessages(response.data);
         } catch (error) {
             console.error(error);

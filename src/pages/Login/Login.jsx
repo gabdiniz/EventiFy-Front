@@ -41,6 +41,7 @@ export function Login() {
 
   async function submitForm(data) {
     const error = await userLogin(data);
+    console.log(data)
     if (error) {
       toast.error(error.response.data.message, {
         position: "bottom-right",
@@ -62,7 +63,7 @@ export function Login() {
   async function onSubmitEsqueciSenha(data) {
     setLoading(true);
     axios
-      .post(process.env.REACT_APP_IP+":3001/auth/reset-password", data)
+      .post(process.env.REACT_APP_IP+":41784/auth/reset-password", data)
       .then(response => {
         setResetEmail(data.email);
         setTimeout(() => {
@@ -95,7 +96,7 @@ export function Login() {
             <InputDefault
               className={errorsDesktop.email && "is-invalid"}
               placeholder="Email"
-              type="email"
+
               ref={formRefDesktop}
               controlid="1"
               {...registerDesktop("email")}
